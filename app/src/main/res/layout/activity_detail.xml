@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="16dp"
+        >
+        <TextView
+            android:id="@+id/tv_title_materi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/img_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/card_view_img"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            android:paddingHorizontal="16dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_img"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_materi">
+
+            <ImageView
+                android:id="@+id/img_materi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/example"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_desc_materi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:text="@string/desc_materi"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="inherit"
+            android:layout_marginTop="24dp"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</ScrollView>

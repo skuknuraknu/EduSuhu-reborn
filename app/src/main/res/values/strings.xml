@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">uas</string>
+    <string name="img_desc">Gambar Materi</string>
+    <string name="title_materi">Judul Materi</string>
+    <string name="keterangan_materi">Status Materi</string>
+    <string name="desc_materi">Deskripsi Materi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="data_title">
+        <item>MASTER THE DRAFTING PHASE IN MOBILE LEGENDS</item>
+        <item>TURN YOUR LAPTOP INTO HACKING MACHINE</item>
+        <item>LEARN TO DRAW ANIME FACES WITH MR BOMBASTIC</item>
+        <item>LEARN TO MAKE MUSIC LIKE ALAN WALKER</item>
+        <item>NODE.JS FROM ZERO TO HERO</item>
+    </string-array>
+
+    <string-array name="data_keterangan">
+        <item>100 Menit</item>
+        <item>202 Menit</item>
+        <item>76 Menit</item>
+        <item>152 Menit</item>
+        <item>87 Menit</item>
+    </string-array>
+
+    <string-array name="data_img">
+        <item>https://i.postimg.cc/FKZSVv98/fanny.jpg</item>
+        <item>https://i.postimg.cc/j2JCmYbs/hacker-anonymous.jpg</item>
+        <item>https://i.postimg.cc/FRzYbJCk/draw-anime.jpg</item>
+        <item>https://i.postimg.cc/bw68xV7L/FL.jpg</item>
+        <item>https://e0.pxfuel.com/wallpapers/394/637/desktop-wallpaper-hello-world-in-node-js-hello-world-webpage-just-in-node-js.jpg</item>
+    </string-array>
+
+    <string-array name="data_deskripsi">
+        <item><string>
+            "Drafting Phase" merupakan salah satu aspek kritis dalam permainan tim.
+            Fase ini melibatkan pemilihan dan pengaturan hero yang akan digunakan oleh setiap pemain
+            dalam tim, yang kemudian akan berpengaruh signifikan terhadap strategi permainan dan
+            peluang kemenangan.
+            Signifikansi Fase Pemilihan Hero:
+                Menjelaskan pentingnya fase pemilihan hero dalam Mobile Legends, di mana keputusan
+            yang tepat dalam memilih hero dapat memberikan keuntungan strategis yang besar bagi tim.
+        </string>
+        </item>
+        <item>Lagi-lagi ugly win untuk Manchester United.</item>
+        <item>Chelsea pelan-pelan membaik.</item>
+        <item>Liverpool baik-baik saja.</item>
+        <item>Tipisnya bench Tottenham.</item>
+        <item>Arsenal mulai bermasalah.</item>
+        <item>Xavi bapuk-puk-puk-puk.</item>
+        <item>Vini-Rodrygo gacor.</item>
+    </string-array>
+</resources>

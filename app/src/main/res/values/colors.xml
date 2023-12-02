@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="coolBlue">#3498db</color>
+
+    <array name="card_background_colors">
+        <item>@color/blue1</item>
+        <item>@color/orange</item>
+        <item>@color/purple</item>
+        <item>@color/pink</item>
+        <item>@color/blue2</item>
+        <item>@color/orange2</item>
+        <item>@color/yellow</item>
+    </array>
+
+    <color name="blue1">#4874fc</color>
+    <color name="orange">#f87404</color>
+    <color name="purple">#a024e4</color>
+    <color name="pink">#f83c84</color>
+    <color name="blue2">#389cc4</color>
+    <color name="orange2">#f88c2c</color>
+    <color name="yellow">#fff700</color>
+</resources>
