@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -55,6 +56,28 @@ class PreferencesFragment : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<TextView>(R.id.toWatchHistory).setOnClickListener {
+            val intent = Intent(requireContext(), WatchHistoryActivity::class.java)
+            startActivity(intent)
+        }
+        view.findViewById<TextView>(R.id.toNotification).setOnClickListener {
+            val intent = Intent(requireContext(), NotificationActivity::class.java)
+            startActivity(intent)
+        }
+        view.findViewById<TextView>(R.id.toPrivacyData).setOnClickListener {
+            val intent = Intent(requireContext(), PrivacyDataActivity::class.java)
+            val user = FirebaseAuth.getInstance().currentUser
+            intent.putExtra("email", user?.email.toString())
+            intent.putExtra("nama", user?.email?.split("@")?.get(0).toString())
+            startActivity(intent)
+        }
+        view.findViewById<TextView>(R.id.toAbout).setOnClickListener {
+            val intent = Intent(requireContext(), AboutActivity::class.java)
+            startActivity(intent)
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

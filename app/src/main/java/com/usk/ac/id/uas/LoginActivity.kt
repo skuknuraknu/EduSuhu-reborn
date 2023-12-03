@@ -21,8 +21,10 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        supportActionBar?.hide()
         auth = FirebaseAuth.getInstance()
-        var user = auth.currentUser
+        var user = auth?.currentUser?.email
+        Log.i("LOGINPROCESS", user.toString())
         if ( user != null) {
             val intent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(intent)

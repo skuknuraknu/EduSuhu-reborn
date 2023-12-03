@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         val imageURL = intent.getStringExtra("photo")
         var email = intent.getStringExtra("email")
-        var nama = intent.getStringExtra("nama")
+        var nama = auth.currentUser?.email.toString().split("@")[0]
 
         // Update the TextView and ImageView using the binding object
         binding.homeHelloTextview.text = "Hello,\n$nama"

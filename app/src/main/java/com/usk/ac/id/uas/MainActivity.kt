@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         bottomNavView = findViewById(R.id.bottomNavView)
+        supportActionBar?.hide()
         // Set the initial fragment
         replaceFragment(HomeFragment())
         FirebaseApp.initializeApp(this)

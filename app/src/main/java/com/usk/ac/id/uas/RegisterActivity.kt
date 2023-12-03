@@ -20,6 +20,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         Auth = FirebaseAuth.getInstance()
+        supportActionBar?.hide()
         findViewById<Button>(R.id.buttonRegister).setOnClickListener(View.OnClickListener {
             RegisterProcess()
         })

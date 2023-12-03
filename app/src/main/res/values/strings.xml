@@ -6,7 +6,15 @@
     <string name="desc_materi">Deskripsi Materi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="app_desc">Edusuhu merupakan aplikasi kursus yang ditujukan untuk
+    siapa saja yang ingin belajar.Dengan keberagaman materi pembelajaran yang disediakan,
+        aplikasi ini menyasar berbagai kelompok, mulai dari pelajar sekolah, mahasiswa, hingga para
+        profesional yang ingin meningkatkan keahlian mereka. Dengan demikian, Edusuhu menjadi
+        solusi pembelajaran yang dapat diakses oleh berbagai lapisan masyarakat tanpa batasan
+        usia atau latar belakang pendidikan tertentu. Melalui platform kursusnya, Edusuhu
+        memberikan peluang bagi setiap individu untuk mengikuti kelas-kelas yang sesuai
+        dengan minat dan kebutuhan mereka, menciptakan ekosistem pembelajaran yang inklusif
+        dan mendukung pertumbuhan intelektual serta kemajuan karir.</string>
     <string-array name="data_title">
         <item>MASTER THE DRAFTING PHASE IN MOBILE LEGENDS</item>
         <item>TURN YOUR LAPTOP INTO HACKING MACHINE</item>
@@ -42,12 +50,39 @@
             yang tepat dalam memilih hero dapat memberikan keuntungan strategis yang besar bagi tim.
         </string>
         </item>
-        <item>Lagi-lagi ugly win untuk Manchester United.</item>
-        <item>Chelsea pelan-pelan membaik.</item>
-        <item>Liverpool baik-baik saja.</item>
-        <item>Tipisnya bench Tottenham.</item>
-        <item>Arsenal mulai bermasalah.</item>
-        <item>Xavi bapuk-puk-puk-puk.</item>
-        <item>Vini-Rodrygo gacor.</item>
+        <item>
+            Hacker adalah orang yang skill pemrogramannya mampu menerobos sistem keamanan komputer atau
+            jaringan komputer untuk tujuan tertentu. Seorang hacker memiliki pemahaman lanjutan tentang
+            komputer, jaringan, pemrograman, atau perangkat keras. Mengetahui apa itu hacker dapat memahami
+            bahwa hacker tak selamanya identik dengan penjahat dunia maya. Di dunia siber, hacker adalah
+            sosok yang bisa meretas perangkat seperti komputer, ponsel, webcam, hingga router.
+            Tindakan hacker yang merugikan pihak tertentu merupakan tindakan kriminal. Namun, pada kasus
+            tertentu, hacker adalah sosok yang juga bisa menguntungkan. Mengetahui apa itu hacker
+            saat ini sudah banyak menggunakan jasanya itu untuk memberikan perlindungan pada sistem
+            website atau aplikasi yang digunakan oleh suatu perusahaan.
+            Hacker tersebut dikenal dengan istilah ethical hacker atau white hat.
+        </item>
+        <item>Menggambar anime menjadi salah satu kegiatan yang bisa dilakukan pada waktu luang,
+            khususnya bagi para wibu atau pecinta budaya Jepang. Selain menjadi hobi, kegiatan
+            tersebut juga memiliki daya jual untuk menambah pemasukan. Bagi kalian yang baru akan
+            mencoba menggambar anime, jangan ragu. Sebab, cara menggambar anime untuk pemula tidak
+            sulit. Selain itu, alat dan bahan yang perlu disiapkan juga cukup sederhana.
+            Sepert dikutip dari buku berjudul Cara Mudah Menggambar Manga tulisan Fodou (2013),
+            beberapa alat dan bahan yang digunakan untuk menggambar anime meliputi pensil,
+            penghapus, drawing pen, kertas, hingga alat pewarna. Selain menyiapkan alat-alat,
+            kalian juga harus mampu berimajinasi dan mengembangkan kreativitas, sehingga bisa
+            menghasilkan karya yang memuaskan</item>
+        <item>Bagi pencinta musik, menciptakan sebuah instrumen musik atau lagu merupakan hal yang
+            sangat didambakan. Apalagi bagi yang sudah mahir dalam memainkan alat musik, bahkan
+            kalian sendiri sudah mampu menciptakan lirik sendiri dan membuatnya ke dalam sebuah lagu
+            . Nah, ada sebuah software atau aplikasi yang dapat digunakan oleh seorang pemula
+            untuk mulai belajar memproduksi musik. Nama software-nya yaitu FL Studio.</item>
+        <item>Node.js adalah runtime environment untuk JavaScript yang bersifat open-source dan
+            cross-platform. Dengan Node.js kita dapat menjalankan kode JavaScript di mana pun,
+            tidak hanya terbatas pada lingkungan browser. Node.js menjalankan V8 JavaScript engine
+            (yang juga merupakan inti dari Google Chrome) di luar
+            browser. Ini memungkinkan Node.js memiliki performa yang tinggi.Node.js juga menyediakan
+            banyak library/module JavaScript yang membantu menyederhanakan pengembangan aplikasi web
+        </item>
     </string-array>
 </resources>

@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide
 
 class ListMateriAdapter(private val listMateri: ArrayList<Materi>) :
     RecyclerView.Adapter<ListMateriAdapter.ListViewHolder>() {
-    private val context: Context? = null
+    private lateinit var context: Context
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -41,7 +41,7 @@ class ListMateriAdapter(private val listMateri: ArrayList<Materi>) :
         holder.itemView.setOnClickListener {
             var id = 0
             var videoUrl: String? = null
-            val intent = Intent(it.getContext(), CourseActivity::class.java)
+            val intent by lazy { Intent(it.context, CourseActivity::class.java) }
             if ( "MASTER THE DRAFTING PHASE IN MOBILE LEGENDS" == title) {
                 id = 1
                 videoUrl = "https://www.youtube.com/embed/P2BktYmTHZE"
@@ -63,7 +63,13 @@ class ListMateriAdapter(private val listMateri: ArrayList<Materi>) :
             intent.putExtra("keterangan", listMateri[position].desc)
             intent.putExtra("gambar", "$img")
             intent.putExtra("videoUrl", "$videoUrl")
-            it.getContext().startActivity(intent)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            it?.context?.applicationContext?.let { appContext ->
+                appContext.startActivity(intent)
+            } ?: run {
+                Log.e("Error", "Application Context is null when trying to start CourseActivity")
+                // Handle the case where application context is null
+            }
 //            handleOnClickCourse()
 //            onItemClickCallback.onItemClicked(listMateri[holder.adapterPosition])
         }

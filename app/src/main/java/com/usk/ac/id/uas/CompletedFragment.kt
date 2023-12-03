@@ -22,6 +22,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.getValue
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,6 +68,23 @@ class CompletedFragment : Fragment() {
         view.findViewById<Button>(R.id.btnGetCertMlbb).setOnClickListener{
             btnGetCertMlbb(view)
         }
+        view.findViewById<Button>(R.id.btnGetCertHack).setOnClickListener{
+            btnGetCertHack(view)
+        }
+        view.findViewById<Button>(R.id.btnGetCertDraw).setOnClickListener{
+            btnGetCertDraw(view)
+        }
+        view.findViewById<Button>(R.id.btnGetCertMusic).setOnClickListener{
+            btnGetCertMusic(view)
+        }
+        view.findViewById<Button>(R.id.btnGetCertNodejs).setOnClickListener{
+            btnGetCertNode(view)
+        }
+
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+
     }
     companion object {
         /**
@@ -89,21 +107,138 @@ class CompletedFragment : Fragment() {
     }
 
     fun btnGetCertMlbb(view: View) {
-        // Replace "your_image_name" with the actual name of the image in your res/drawable folder
-        val image
-        val imageName = "your_image_name"
-        val resourceId = resources.getIdentifier(imageName, "drawable", )
-        val imageUri = Uri.parse("android.resource://$packageName/$resourceId")
         db.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 db.child(nama_pengguna).child("1")
-                    .child("completed").get().addOnSuccessListener {
+                    .get().addOnSuccessListener {
                     if ( it.exists() ) {
-                        val status = it.getValue().toString()
+                        val status = it.child("completed").getValue().toString()
+                        Log.i("STATUS", status)
+                        if ( status == "true" ) {
+                            val image = it.child("courseImage").getValue().toString()
+                            val intent = Intent(requireContext(), CertificateActivity::class.java)
+                            intent.putExtra("image", "cert_mlbb")
+                            requireActivity().startActivity(intent)
+                        } else {
+                            Toast.makeText(requireContext(), "Anda belum menyelesaikan kursus" +
+                                    ".", Toast.LENGTH_SHORT).show()
+                        }
 
-                        Log.i("GET CERT MLBB", status)
                     }
                 }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.i("GET CERT MLBB", "${DatabaseError.UNKNOWN_ERROR}")
+            }
+        })
+
+    }
+    fun btnGetCertHack(view: View) {
+        db.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                db.child(nama_pengguna).child("2")
+                    .get().addOnSuccessListener {
+                        if ( it.exists() ) {
+                            val status = it.child("completed").getValue().toString()
+                            Log.i("STATUS", status)
+                            if ( status == "true" ) {
+                                val image = it.child("courseImage").getValue().toString()
+                                val intent = Intent(requireContext(), CertificateActivity::class.java)
+                                intent.putExtra("image", "cert_hack")
+                                requireActivity().startActivity(intent)
+                            } else {
+                                Toast.makeText(requireContext(), "Anda belum menyelesaikan kursus" +
+                                        ".", Toast.LENGTH_SHORT).show()
+                            }
+
+                        }
+                    }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.i("GET CERT MLBB", "${DatabaseError.UNKNOWN_ERROR}")
+            }
+        })
+
+    }
+    fun btnGetCertDraw(view: View) {
+        db.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                db.child(nama_pengguna).child("3")
+                    .get().addOnSuccessListener {
+                        if ( it.exists() ) {
+                            val status = it.child("completed").getValue().toString()
+                            Log.i("STATUS", status)
+                            if ( status == "true" ) {
+                                val image = it.child("courseImage").getValue().toString()
+                                val intent = Intent(requireContext(), CertificateActivity::class.java)
+                                intent.putExtra("image", "cert_draw")
+                                requireActivity().startActivity(intent)
+                            } else {
+                                Toast.makeText(requireContext(), "Anda belum menyelesaikan " +
+                                        "kursus" +
+                                        ".", Toast.LENGTH_SHORT).show()
+                            }
+
+                        }
+                    }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.i("GET CERT MLBB", "${DatabaseError.UNKNOWN_ERROR}")
+            }
+        })
+
+    }
+    fun btnGetCertMusic(view: View) {
+        db.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                db.child(nama_pengguna).child("4")
+                    .get().addOnSuccessListener {
+                        if ( it.exists() ) {
+                            val status = it.child("completed").getValue().toString()
+                            Log.i("STATUS", status)
+                            if ( status == "true" ) {
+                                val image = it.child("courseImage").getValue().toString()
+                                val intent = Intent(requireContext(), CertificateActivity::class.java)
+                                intent.putExtra("image", "cert_music")
+                                requireActivity().startActivity(intent)
+                            } else {
+                                Toast.makeText(requireContext(), "Anda belum menyelesaikan kursus" +
+                                        ".", Toast.LENGTH_SHORT).show()
+                            }
+
+                        }
+                    }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.i("GET CERT MLBB", "${DatabaseError.UNKNOWN_ERROR}")
+            }
+        })
+
+    }
+    fun btnGetCertNode(view: View) {
+        db.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                db.child(nama_pengguna).child("5")
+                    .get().addOnSuccessListener {
+                        if ( it.exists() ) {
+                            val status = it.child("completed").getValue().toString()
+                            Log.i("STATUS", status)
+                            if ( status == "true" ) {
+                                val image = it.child("courseImage").getValue().toString()
+                                val intent = Intent(requireContext(), CertificateActivity::class.java)
+                                intent.putExtra("image", "cert_nodejs")
+                                requireActivity().startActivity(intent)
+                            } else {
+                                Toast.makeText(requireContext(), "Anda belum menyelesaikan kursus" +
+                                        ".", Toast.LENGTH_SHORT).show()
+                            }
+
+                        }
+                    }
             }
 
             override fun onCancelled(error: DatabaseError) {

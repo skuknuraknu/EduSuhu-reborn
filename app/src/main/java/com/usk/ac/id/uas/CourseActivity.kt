@@ -24,7 +24,7 @@ class CourseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course)
-
+        supportActionBar?.hide()
         auth = FirebaseAuth.getInstance()
         val webView: WebView = findViewById(R.id.webView)
         configureWebViewSettings(webView)
@@ -69,5 +69,11 @@ class CourseActivity : AppCompatActivity() {
         webSettings.javaScriptEnabled = true
         webView.webChromeClient = WebChromeClient()
         webView.webViewClient = WebViewClient()
+    }
+    // Other lifecycle methods
+
+    override fun onDestroy() {
+        super.onDestroy()
+        finish() // Finish the activity when it is destroyed
     }
 }

@@ -1,17 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreferencesFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PreferencesFragment"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:padding="50dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Your\nPreferences\nHere!"
+        android:fontFamily="@font/montserrat_regu"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_edit"
+        android:padding="30dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:drawableRight="@drawable/baseline_navigate_next_24"
+            android:id="@+id/toWatchHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watch History"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+        <TextView
+            android:drawableRight="@drawable/baseline_navigate_next_24"
+            android:id="@+id/toNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+        <TextView
+            android:drawableRight="@drawable/baseline_navigate_next_24"
+            android:id="@+id/toPrivacyData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy &amp; Data"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+        <TextView
+            android:drawableRight="@drawable/baseline_navigate_next_24"
+            android:id="@+id/toAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/preferences_signOut_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/cool_button"
         android:text="SIGN OUT"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:fontFamily="@font/montserrat_regu"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"/>
 
-</FrameLayout>
+
+</LinearLayout>
